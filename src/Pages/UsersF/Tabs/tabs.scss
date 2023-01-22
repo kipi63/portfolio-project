@@ -1,0 +1,106 @@
+.tabs-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+
+  background: #f1f1f1;
+  margin: 100px auto 0;
+  word-break: break-all;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-bottom: 25px;
+
+  .bloc-tabs {
+    display: flex;
+    .tabs {
+      border: none;
+      padding: 15px;
+      text-align: center;
+      width: 50%;
+      background: rgba(128, 128, 128, 0.075);
+      cursor: pointer;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+      box-sizing: content-box;
+      position: relative;
+      outline: none;
+      &.active-tabs {
+        background: white;
+        border-bottom: 1px solid transparent;
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: -5px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: calc(100% + 2px);
+          height: 5px;
+          background: rgb(88, 147, 241);
+        }
+      }
+    }
+  }
+  .content-tabs {
+    flex-grow: 1;
+    .content {
+      background: white;
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      display: none;
+      &.active-content {
+        display: block;
+      }
+    }
+  }
+}
+.single-container {
+  max-width: 100%;
+
+  text-align: center;
+  margin-bottom: 2px;
+  & span {
+    background-color: bisque;
+    border-radius: 10px;
+    padding: 2px;
+  }
+  &:hover {
+    scale: 1.1;
+  }
+}
+.task-text {
+  color: blue;
+  &.completed {
+    color: red;
+    text-decoration: line-through;
+    opacity: 0.9;
+  }
+}
+.user-id {
+  color: rgba(0, 109, 119, 1);
+}
+.post-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 5px;
+  flex-wrap: wrap;
+
+  .post-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #ccc;
+    border-radius: 15px;
+    width: 200px;
+    padding: 5px;
+    .post-title {
+      color: blue;
+    }
+    .post-body {
+      color: red;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.container-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+  .post {
+    background-color: rgb(218, 218, 218);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px;
+    .post-title {
+      text-transform: uppercase;
+    }
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  .input {
+    border-radius: 15px;
+    width: 60%;
+    min-width: 20%;
+    padding: 10px;
+    background: #ccc;
+    border: none;
+    &:active,
+    &:focus {
+      background-color: bisque;
+    }
+  }
+  .submit {
+    border-radius: 15px;
+    width: 60%;
+    cursor: pointer;
+    padding: 10px;
+    background-color: blue;
+    color: #fff;
+    text-transform: uppercase;
+    &:active {
+      scale: 0.92;
+      background-color: red;
+    }
+  }
+}
